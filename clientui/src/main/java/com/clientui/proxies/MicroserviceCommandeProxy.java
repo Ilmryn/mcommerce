@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.clientui.beans.CommandeBean;
 
-@FeignClient(name = "microservice-commandes")
+@FeignClient(name = "zuul-server")
 @RibbonClient(name = "microservice-commandes")
 public interface MicroserviceCommandeProxy {
 
-    @PostMapping(value = "/microservice-paiement/commandes")
+    @PostMapping(value = "/microservice-commandes/commandes")
     CommandeBean ajouterCommande(@RequestBody CommandeBean commande);
 }
