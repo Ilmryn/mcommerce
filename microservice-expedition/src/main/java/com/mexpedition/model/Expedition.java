@@ -14,6 +14,9 @@ public class Expedition {
 	private Integer idCommande;
 
 	private Integer etat;
+	
+	public Expedition() {
+	}
 
 	public Expedition(int id, Integer idCommande, Integer etat) {
 		super();
